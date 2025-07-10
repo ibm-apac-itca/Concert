@@ -40,6 +40,7 @@ export SPEC_VERSION="1.0.4"
 # TODO: Make sure the App name is the same as what you define in Instana
 export APP_NAME="Your application name"
 export APP_VERSION="1.0.0.0"
+export APP_FILE_NAME="1.sbom-concert-application-${APP_NAME}-${APP_VERSION}.json"
 
 export ENVIRONMENT_NAME_1="development"
 export ENVIRONMENT_NAME_2="pre-production"
