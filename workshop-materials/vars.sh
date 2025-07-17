@@ -15,7 +15,7 @@
 ##
 # Container command and options used on this environment
 ##
-export OPTIONS="-it --rm -u $(id -u):$(id -g)"
+export OPTIONS=""
 export CONTAINER_COMMAND="podman run"
 
 ##
