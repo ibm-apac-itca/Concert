@@ -8,24 +8,24 @@ ROBOT_SHOP_DIR="${HOME}/robot-shop"
 
 # Array of robotshop images from crictl output
 declare -a IMAGES=(
-    "robotshop/rs-cart:latest"
-    "robotshop/rs-catalogue:latest"
-    "robotshop/rs-dispatch:latest"
-    "robotshop/rs-load:latest"
-    "robotshop/rs-mongodb:latest"
-    "robotshop/rs-mysql-db:latest"
-    "robotshop/rs-payment:latest"
-    "robotshop/rs-ratings:latest"
-    "robotshop/rs-shipping:latest"
-    "robotshop/rs-user:latest"
-    "robotshop/rs-web:latest"
+    "docker.io/robotshop/rs-cart:latest"
+    "docker.io/robotshop/rs-catalogue:latest"
+    "docker.io/robotshop/rs-dispatch:latest"
+    "docker.io/robotshop/rs-load:latest"
+    "docker.io/robotshop/rs-mongodb:latest"
+    "docker.io/robotshop/rs-mysql-db:latest"
+    "docker.io/robotshop/rs-payment:latest"
+    "docker.io/robotshop/rs-ratings:latest"
+    "docker.io/robotshop/rs-shipping:latest"
+    "docker.io/robotshop/rs-user:latest"
+    "docker.io/robotshop/rs-web:latest"
 )
 
 # Function to extract component name from image
 get_component_name() {
     local image="$1"
-    # Extract component name (e.g., rs-cart from robotshop/rs-cart:latest)
-    echo "$image" | sed 's|robotshop/||' | sed 's|:.*||'
+    # Extract component name (e.g., rs-cart from docker.io/robotshop/rs-cart:latest)
+    echo "$image" | sed 's|docker.io/robotshop/||' | sed 's|:.*||'
 }
 
 # Function to run image scan
